@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAF9BA56-EFB4-4171-8FF4-0089C33CFFB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoToan</RootNamespace>
+    <AssemblyName>CoToan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EngineIoClientDotNet, Version=0.9.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EngineIoClientDotNet.0.9.21\lib\net40\EngineIoClientDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SocketIoClientDotNet, Version=0.9.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SocketIoClientDotNet.0.9.12\lib\net40\SocketIoClientDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.12.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>packages\WebSocket4Net.0.13.1\lib\net40\WebSocket4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASS\NGUOICHOI.cs" />
+    <Compile Include="CLASS\QUANCO.cs" />
+    <Compile Include="DATA\NguoiChoi.cs" />
+    <Compile Include="DATA\ThongTinVanCo.cs" />
+    <Compile Include="GUI\FormBanCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBanCo.Designer.cs">
+      <DependentUpon>FormBanCo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormKhoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormKhoiDong.Designer.cs">
+      <DependentUpon>FormKhoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLuaChonCheDoChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLuaChonCheDoChoi.Designer.cs">
+      <DependentUpon>FormLuaChonCheDoChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormBanCo.resx">
+      <DependentUpon>FormBanCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormKhoiDong.resx">
+      <DependentUpon>FormKhoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLuaChonCheDoChoi.resx">
+      <DependentUpon>FormLuaChonCheDoChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include=".bin\node.cmd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_3_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_4_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_5_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_6_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_7_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_8_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_9_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BanCo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_0_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_1_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_2_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSetting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSetting_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_0_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_1_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_2_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_3_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_4_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_5_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_6_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_7_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_8_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_9_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Do_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xanh_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanEat.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
